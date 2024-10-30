@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  composer_blog:
+    image: composer:latest
+    container_name: laravel_blog
+    user: "root"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: bash
+    tty: true
